@@ -20,3 +20,5 @@ new_student_Id = students.insert_many(students_insert)
 print("-- INSERT STATEMENTS --")
 for student in students_insert:
     print("Inserted student record {} {} into the students collection with document_id {}".format(student["first_name"], student["last_name"], student["student_id"]))
+
+input("\n\nEnd of program, press any key to continue...")

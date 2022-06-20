@@ -15,3 +15,6 @@ print("-- DISPLAYING STUDENT DOCUMENT FROM find one() QUERY --")
 print("Student ID: {}".format(found_student["student_id"]))
 print("First Name: {}".format(found_student["first_name"]))
 print("Last Name: {}\n".format(found_student["last_name"]))
+
+
+input("\n\nEnd of program, press any key to continue...")
