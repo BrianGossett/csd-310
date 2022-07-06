@@ -21,14 +21,14 @@ try:
     cursor = db.cursor()
     cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player INNER JOIN team ON player.team_id = team.team_id")
 
-    teams = cursor.fetchall()
+    Players = cursor.fetchall()
 
     print("-- DISPLAYING PLAYER RECORDS --")
-    for team in teams:
-        print("Player ID: {}".format(team[0]))
-        print("First Name: {}".format(team[1]))
-        print("Last Name: {}".format(team[2]))
-        print("Team Name: {}\n".format(team[3]))
+    for Player in Players:
+        print("Player ID: {}".format(Player[0]))
+        print("First Name: {}".format(Player[1]))
+        print("Last Name: {}".format(Player[2]))
+        print("Team Name: {}\n".format(Player[3]))
 
 
 
