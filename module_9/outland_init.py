@@ -1,7 +1,11 @@
-# Brian Thomas Gossett
-# July 5 2022
-# Week 7 module 9.3
-# Update and delete
+    # Title: Outlander Init Script
+    # Authors: 	Chris Beatty
+	# 			Brian Gossett
+	# 			Larissa Passamani Lima
+	# 			Christeen Safar
+	# 			Michele Speidel
+
+    # Date: 7 July 2022
 
 import mysql.connector
 from mysql.connector import errorcode
