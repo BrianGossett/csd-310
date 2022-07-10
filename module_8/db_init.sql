@@ -34,7 +34,7 @@ CREATE TABLE player (
     player_id   INT             NOT NULL        AUTO_INCREMENT,
     first_name  VARCHAR(75)     NOT NULL,
     last_name   VARCHAR(75)     NOT NULL,
-    team_id     INT             NOT NULL,
+    team_id     INT,
     PRIMARY KEY(player_id),
     CONSTRAINT fk_team 
     FOREIGN KEY(team_id)
@@ -48,6 +48,12 @@ INSERT INTO team(team_name, mascot)
 
 INSERT INTO team(team_name, mascot)
     VALUES('Team Sauron', 'Orcs');
+
+INSERT INTO team(team_name, mascot)
+    VALUES('Team Big Wiggs', 'Rockifeller');
+
+INSERT INTO team(team_name, mascot)
+    VALUES('Team Pokemon', 'PikaPika');
 
 
 -- insert player records 
@@ -68,3 +74,15 @@ INSERT INTO player(first_name, last_name, team_id)
 
 INSERT INTO player(first_name, last_name, team_id)
     VALUES('Azog', 'The Defiler', (SELECT team_id FROM team WHERE team_name = 'Team Sauron'));
+
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Loner', 'Bob', NULL);
+
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Wolf', 'NoTeam', NULL);
+
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Pickle', 'Rick', NULL);
+
+INSERT INTO player(first_name, last_name, team_id) 
+    VALUES('Your', 'Mom', NULL);
