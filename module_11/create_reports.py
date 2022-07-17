@@ -50,7 +50,7 @@ def createViews(cursor):
         print(err)
 
 
-    statement = "CREATE VIEW customer_rent_vs_buy_report AS SELECT case when CO.is_rental = TRUE then 'Rent' else 'Buy' end AS 'RentVsBuy' , COUNT(*)FROM item AS I INNER JOIN item_type AS IT    ON I.item_type_id = IT.item_type_id INNER JOIN customer_order AS CO    ON I.item_id = CO.item_id INNER JOIN customer AS C    ON CO.customer_id = C.customer_id GROUP BY CO.is_rental"
+    statement = "CREATE VIEW customer_rent_vs_buy_report AS SELECT case when CO.is_rental = TRUE then 'Rent' else 'Buy' end AS 'RentVsBuy' , COUNT(*) FROM item AS I INNER JOIN item_type AS IT    ON I.item_type_id = IT.item_type_id INNER JOIN customer_order AS CO    ON I.item_id = CO.item_id INNER JOIN customer AS C    ON CO.customer_id = C.customer_id GROUP BY CO.is_rental"
     try:
         cursor.execute(statement)
         db.commit()
@@ -248,7 +248,7 @@ def runReports(cursor):
                 print("{}: \t{}".format(values[count], field))
                 count+=1
             print()
-        input("\n\nPress any key to continue...")    
+        input("\n\nPress any key to continue...\n")    
 
 try:
     print("-- Outlander Report Script --")
